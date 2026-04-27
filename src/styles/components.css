@@ -1,0 +1,72 @@
+/*
+  Reusable CSS classes for Windows XP UI primitives:
+  windows, title bars, buttons, tables, placeholders, etc.
+
+  These classes are used by multiple React components, which is
+  why they live here instead of in a component-specific file.
+  This is the CSS equivalent of a "shared utility library."
+*/
+
+/**
+* Windows XP window
+*/
+
+/**
+* Title bar
+*/
+
+/**
+* Title bar controls
+*/
+
+/**
+* Menu bar
+*/
+
+/**
+* Address bar
+*/
+
+/**
+* Window content area
+*/
+
+/**
+* Explorer layout
+*/
+
+/**
+* Windows XP button
+*/
+
+/**
+* Content style for headings and lists
+*/
+
+/**
+* Placeholder boxes
+*/
+
+/**
+* Info box
+*/
+
+/**
+* Windows XP table
+*/
+
+/**
+* Windows XP style tabbed panel
+*/
+
+/**
+* Windows XP progress bar
+*/
+
+/**
+* Windows XP desktop icons
+*/
+
+/**
+* Responsive logic for media to show
+*/

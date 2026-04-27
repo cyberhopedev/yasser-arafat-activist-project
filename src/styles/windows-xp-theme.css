@@ -1,0 +1,19 @@
+/*
+  All Windows XP visual styles live here as CSS custom properties (variables).
+  Separating styles into their own file is a key principle of "separation of concerns",
+  each file has ONE job. This file's job: define the XP look.
+
+  Components import this file to stay visually consistent without copy-pasting values.
+*/
+
+/**
+* Custom CSS properties available for every element
+*/
+
+/**
+* Golbal website resetter logic
+*/
+
+/**
+* Scrollbar styling for the website usign Webkit
+*/
