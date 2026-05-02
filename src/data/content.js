@@ -181,12 +181,24 @@ export const sources = [
 * Navigation items for the sidebar
 */
 export const navLinks = [
-
+  { label: '🌍 Historical Context',  section: 'context',       tab: 'overview'  },
+  { label: '⭐ Key Moments',         section: 'timeline',      tab: 'overview'  },
+  { label: '🔬 Race & Identity',     section: 'race',          tab: 'overview'  },
+  { label: '✊ Repertoire',          section: 'contention',    tab: 'activism'  },
+  { label: '📋 Tactics & Results',  section: 'tactics',       tab: 'activism'  },
+  { label: '🌐 International',       section: 'international', tab: 'activism'  },
+  { label: '📚 Class Analysis',     section: 'classmat',      tab: 'analysis'  },
+  { label: '💭 Final Thoughts',     section: 'thoughts',      tab: 'analysis'  },
+  { label: '📄 Sources',            section: 'sources',       tab: 'sources'   },
 ];
 
 /**
 * Desktop icons for the fake desktop background on the site
 */
 export const desktopIcons = [
-
+  { emoji: '🌍', label: 'Historical Overview', tab: 'overview'  },
+  { emoji: '✊', label: 'Activism',             tab: 'activism'  },
+  { emoji: '📚', label: 'Analysis',            tab: 'analysis'  },
+  { emoji: '📄', label: 'Sources',             tab: 'sources'   },
+  { emoji: '🗑️', label: 'Recycle Bin',         tab: null        },
 ];
