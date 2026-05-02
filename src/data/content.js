@@ -127,17 +127,17 @@ export const tactics = [
 */
 export const comparisons = [
   { 
-    caseStudy: "", 
+    caseStudy: "South Africa / ANC (Peteet 2016)", 
+    similarity: "Both are settler colonial states built on racialized classification, land expropriation (~87% of land appropriated in both cases), mobility control, and security repression. Both PLO and ANC advocated democratic secular states before being forced into more constrained positions through negotiations. Palestinian BDS explicitly modeled on anti-apartheid campaign. PLO and ANC established direct ties of solidarity.", 
+    difference: "South Africa needed Black labor, incorporated the indigenous population economically while maintaining racial hierarchy. Israel aimed at demographic dilution through displacement: 'maximum territory with a minimum number of Arabs.' Apartheid was dismantled; Palestinian occupation continues."
+  },
+  { 
+    caseStudy: "French Algeria (Early 1990's)", 
     similarity: "", 
     difference: ""
   },
   { 
-    caseStudy: "", 
-    similarity: "", 
-    difference: ""
-  },
-  { 
-    caseStudy: "", 
+    caseStudy: "Jim Crow South", 
     similarity: "", 
     difference: ""
   },
@@ -150,30 +150,30 @@ export const sources = [
   {
     id: 1,
     type: "article",
-    citation: "",
-    key_argument: "",
-    used_in: "",
+    citation: "Wagner, Donald. 'Lebanon: An American\'s View.' Race & Class XXIV, no. 4 (1983): 401-409.",
+    key_argument: "Eyewitness account of the 1982 Israeli invasion of Lebanon. Documents systematic destruction of Palestinian civilian infrastructure — hospitals, the Palestine Research Centre, refugee camps — using US-supplied weapons. Argues the invasion aimed to destroy the PLO as a political organization. Reveals how US Cold War framing ('Soviet proxy') neutralized American diplomatic opposition to the offensive.",
+    used_in: "Historical Context (Q1), Tactics & Results (Q3/Q4), International Connections (Q5), Final Thoughts",
   },
   {
     id: 2,
     type: "article",
-    citation: "",
-    key_argument: "",
-    used_in: "",
+    citation: "Peteet, Julie. 'The Work of Comparison: Israel/Palestine and Apartheid.' Anthropological Quarterly 89, no. 1 (2016): 247-281. DOI: https://doi.org/10.1353/anq.2016.0015",
+    key_argument: "Comparative anthropological analysis positioning Israel/Palestine within the global category of settler colonial formations. Argues both Israel and apartheid South Africa built hierarchical social orders around racial/ethnic classification systems, land law, and mobility control. Identifies PLO–ANC solidarity and the origins of the BDS movement. Notes the key difference: South Africa needed Black labor while Israel aimed at demographic dilution through displacement.",
+    used_in: "Race Co-Construction (Q3), Class Analysis (Part 3, Q1), Comparisons (Q2)",
   },
   {
     id: 3,
     type: "article",
-    citation: "",
-    key_argument: "",
-    used_in: "",
+    citation: "Newman, David. 'Compare and Contrast.' Progress in Human Geography 23, no. 1 (1999): 1-5.",
+    key_argument: "Methodological essay on the difficulty and necessity of comparative conflict analysis. Uses the Israel-Palestine conflict — including the Rabin–Arafat White House handshake — as its central example. Argues that 'ingrained positioning' makes it genuinely hard for participants in a conflict to read the other\'s narrative as legitimate, and that crossing disciplinary and comparative boundaries is essential for understanding such conflicts.",
+    used_in: "Race Co-Construction (Q3), Final Thoughts",
   },
   {
     id: 4,
     type: "article",
-    citation: "",
-    key_argument: "",
-    used_in: "",
+    citation: "Agha, Hussein and Ahmad Samih Khalidi. 'Yasser Arafat: Why He Still Matters.' The Guardian, 13 November 2014. https://www.theguardian.com/news/2014/nov/13/-sp-yasser-arafat-why-he-still-matters",
+    key_argument: "Comprehensive assessment of Arafat\'s leadership, legacy, and political significance written ten years after his death. Identifies three legacies: restoring Palestinian political consciousness after 1948, laying groundwork for a potential resolution with Israel, and returning the movement to Palestinian soil via Oslo. Documents Arafat\'s organizational model (Fatah as haraka not hizb), his international revolutionary network, and his pragmatic, often deliberately ambiguous, leadership style.",
+    used_in: "Historical Context (Q1), Race Co-Construction (Q3), Activism (Q1–Q5), Final Thoughts",
   }
 ];
 
