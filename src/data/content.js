@@ -132,14 +132,9 @@ export const comparisons = [
     difference: "South Africa needed Black labor, incorporated the indigenous population economically while maintaining racial hierarchy. Israel aimed at demographic dilution through displacement: 'maximum territory with a minimum number of Arabs.' Apartheid was dismantled; Palestinian occupation continues."
   },
   { 
-    caseStudy: "French Algeria (Early 1990's)", 
-    similarity: "", 
-    difference: ""
-  },
-  { 
-    caseStudy: "Jim Crow South", 
-    similarity: "", 
-    difference: ""
+    caseStudy: "Rwanda)", 
+    similarity: "Before the Jewish populations in Europe came to settle, both Jewish and Muslim Arabs lived in shared areas without many issues. Of course, after Jewish populations did arrive the displacement of the native populations reached crisis levels. This is similar to how in Rwanda the Hutu and Tutsi lived in shared communities before external influence from colonizing powers arrived in the early 1900s. The usage of identity cards were also seen in both cases.", 
+    difference: "Rwanda had more of an ethnic division, while in Palestine the division started with religion before evolving into a difference in race/ethnicity"
   },
 ];
 
