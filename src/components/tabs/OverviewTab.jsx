@@ -72,11 +72,93 @@ export default function OverviewTab() {
             </section>
 
             <section id="timeline" style={{ marginTop: 18 }}>
-
+                <h2>⭐ Key Moments Timeline</h2>
+ 
+                <table className="xp-table">
+                <thead>
+                    <tr>
+                    <th>Year</th>
+                    <th>Event</th>
+                    <th>Significance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {timeline.map(row => (
+                    <tr key={row.year}>
+                        <td style={{ whiteSpace: 'nowrap' }}>{row.year}</td>
+                        <td>{row.event}</td>
+                        <td>{row.significance ? row.significance : <em style={{ color: '#888' }}>[see content.js]</em>}</td>
+                    </tr>
+                    ))}
+                </tbody>
+                </table>
             </section>
 
             <section id="race" style={{ marginTop: 18 }}>
-
+                <h2>🔬 Race Co-Constructed with Historical Factors</h2>
+ 
+                <div className="info-box">
+                    "Co-construction" means race is not a natural fact but is built alongside other
+                    social categories: Colonial law, religion, class, diaspora, and territory.
+                    The Palestinian case is a central example in the anthropological literature.
+                </div>
+        
+                <p>
+                    Peteet (2016) argues that both Israel and South Africa were states constructed
+                    around classificatory systems that produced racial hierarchy. The broad categories
+                    Arab/Jew — like Black/white in South Africa — were not descriptions of pre-existing
+                    natural groups but the scaffolding upon which "inequality and a hierarchical social
+                    order rested" (Peteet 2016, 249). For Palestinians, this classification was physically
+                    inscribed: color-coded Israeli identity cards, a permit system governing movement, and
+                    separate road networks divided the occupied population into multiple legal sub-categories
+                    based on where they lived and their perceived security risk.
+                </p>
+        
+                <p>
+                    Being "Palestinian" under Israeli occupation was therefore not just an ethnic or
+                    cultural identity — it was a legally imposed administrative category that determined
+                    the conditions of daily life. As Peteet (2016, 264) notes, "the occupation divided
+                    and hierarchized Palestinians into multiple categories which were then inscribed on
+                    their identity cards": Jerusalem residency holders, West Bank residents, Gaza
+                    residents, and Jordanian passport holders all occupied distinct legal positions with
+                    distinct rights to mobility, employment, and family unification.
+                </p>
+        
+                <p>
+                    Palestinian identity was also co-constructed with religion, though within a secular
+                    nationalist framework. Arafat's PLO was explicitly secular — Agha &amp; Khalidi (2014)
+                    note that he "moulded Fatah not as a political party (<em>hizb</em>) with strict dogmas,
+                    but as an all-encompassing national movement (<em>haraka</em>) within which different
+                    political beliefs, competing ideologies and clashing agendas could jostle and compete,
+                    but nevertheless coexist." Despite his early Muslim Brotherhood sympathies, Arafat
+                    "believed that political Islam was a threat to the national character of the Palestinian
+                    movement" (Agha &amp; Khalidi 2014). Yet the Israeli legal framework categorized
+                    Palestinians partly through religion — Peteet (2016) notes Palestinian citizens of
+                    Israel were divided into Muslim, Druze, Christian, and Bedouin categories "with varying
+                    rights and duties accruing to each." Religious differentiation was a tool of
+                    administrative classification that served the colonial state's interest in subdividing
+                    the subject population.
+                </p>
+        
+                <p>
+                    Finally, Palestinian identity was co-constructed with diaspora geography. The mass
+                    refugee population scattered across Jordan, Lebanon, Syria, and beyond was legally
+                    stateless, yet understood itself as Palestinian in precisely the terms Arafat insisted
+                    upon. The tension at the heart of Arafat's own biography — born in Cairo, of mixed
+                    heritage, yet claiming Jerusalem — mirrors the larger tension between territorial
+                    belonging and political solidarity. Arafat resolved this tension politically rather than
+                    biologically, which is why the PLO consistently defined Palestinian identity through the
+                    right of return and political aspiration rather than pure genealogy.
+                </p>
+        
+                <p>
+                    David Newman (1999) observes that competing national groups construct their identities
+                    through "exclusive interpretation of territorial texts" — maps, place names, spatial
+                    myths — that treat land as belonging exclusively to the self. Newman's methodological
+                    point is that this "ingrained positioning" makes it genuinely hard for participants in
+                    a conflict to read the other's narrative as legitimate, which is itself a political fact
+                    that shapes what justice can look like.
+                </p>
             </section>
     </div>
     );
