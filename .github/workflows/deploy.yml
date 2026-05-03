@@ -1,0 +1,57 @@
+# Defines a workflow to run whenever code is pushed to GitHub. Every push to "main" triggers a fresh build and deploys the output to GitHub Pages automatically
+name: Deploy to GitHub Pages
+ 
+# TRIGGER: Run this workflow on every push to the main branch
+on:
+  push:
+    branches:
+      - main
+ 
+# Jobs are the top-level units of work. Each job runs on a fresh
+# virtual machine (ubuntu-latest here). Jobs can run in parallel or in sequence.
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+ 
+    # `permissions` controls what the GITHUB_TOKEN can do.
+    # `contents: write` lets the workflow push the built files to the gh-pages branch.
+    permissions:
+      contents: write
+ 
+    # Steps are individual commands that run in order inside the job.
+    steps:
+      # 1. Check out your repository code onto the virtual machine
+      - name: Checkout repository
+        uses: actions/checkout@v4
+ 
+      # 2. Install Node.js so we can run npm commands
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # `cache: npm` saves your node_modules between runs,
+          # so the workflow runs faster on repeated deploys.
+          cache: 'npm'
+ 
+      # 3. Install all dependencies listed in package.json
+      - name: Install dependencies
+        run: npm ci
+        # `npm ci` (clean install) is preferred over `npm install` in CI
+        # environments because it strictly follows package-lock.json,
+        # ensuring reproducible builds.
+ 
+      # 4. Build the production bundle — outputs to the /dist folder
+      - name: Build
+        run: npm run build
+ 
+      # 5. Push the /dist folder to a special `gh-pages` branch.
+      # GitHub Pages will serve files from this branch automatically.
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # `secrets.GITHUB_TOKEN` is automatically provided by GitHub —
+          # you don't need to create it. It gives the workflow permission to
+          # push to your repository.
+          publish_dir: ./dist
+          # This is the folder that gets pushed to the gh-pages branch
