@@ -5,10 +5,15 @@ import './styles/windows-xp-theme.css';
 import './styles/components.css';
 
 /** Components */
-import Taskbar    from './components/Taskbar.jsx';
-import XpWindow   from './components/WindowsXpWindow.jsx';
-import Sidebar    from './components/Sidebar.jsx';
-import TabBar     from './components/TabBar.jsx';
+import Taskbar         from './components/Taskbar.jsx';
+// NOTE: The local name on the LEFT of `from` is what the rest of this file
+// must use in JSX. JSX `<Foo />` compiles to `React.createElement(Foo, ...)`,
+// so `Foo` is just a regular variable lookup. If the import name doesn't
+// match the JSX tag, React tries to render `undefined` and you get a blank
+// page (with a "X is not defined" ReferenceError in the browser console).
+import WindowsXpWindow from './components/WindowsXpWindow.jsx';
+import Sidebar         from './components/Sidebar.jsx';
+import TabBar          from './components/TabBar.jsx';
 
 /** Tab content panels */
 import OverviewTab  from './components/tabs/OverviewTab.jsx';
