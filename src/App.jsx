@@ -60,7 +60,7 @@ export default function App() {
 
         {/* Right column: main XP window */}
         <div>
-          <XpWindow
+          <WindowsXpWindow
             title="Yasser Arafat — Activist Profile — Microsoft Internet Explorer"
             icon="🌐"
             address="http://arafat-activist-profile.edu/index.html"
@@ -92,7 +92,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </XpWindow>
+          </WindowsXpWindow>
 
           <NotepadWindow />
         </div>
@@ -103,7 +103,7 @@ export default function App() {
 
 function NotepadWindow() {
     return (
-    <XpWindow
+    <WindowsXpWindow
       title="research_notes.txt — Notepad"
       icon="📝"
       menuItems={['File', 'Edit', 'Format', 'Help']}
@@ -116,7 +116,7 @@ function NotepadWindow() {
       }}>
 
       </div>
-    </XpWindow>
+    </WindowsXpWindow>
     );
 }
 
