@@ -28,11 +28,96 @@ const TAB_MAP = {
 };
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState('overview');
 
+  const navigate = useCallback((tab, sectionId) => {
+    setActiveTab(tab);
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  }, []);
+
+  return (
+    <>
+      <Taskbar activeTab={activeTab} />
+
+      <div style={styles.desktop}>
+        {/* Left column: desktop icons */}
+        <div style={styles.icons}>
+          {desktopIcons.map(icon => (
+            <button
+              key={icon.label}
+              className="desktop-icon"
+              onClick={() => icon.tab && setActiveTab(icon.tab)}
+              title={icon.label}
+            >
+              <div className="icon-img">{icon.emoji}</div>
+              <div className="icon-label">{icon.label}</div>
+            </button>
+          ))}
+        </div>
+
+        {/* Right column: main XP window */}
+        <div>
+          <XpWindow
+            title="Yasser Arafat — Activist Profile — Microsoft Internet Explorer"
+            icon="🌐"
+            address="http://arafat-activist-profile.edu/index.html"
+          >
+            <div style={{ margin: 3, border: '1px solid #aaa' }}>
+              <div className="explorer-layout">
+                <Sidebar onNavigate={navigate} />
+
+                <div className="explorer-main">
+                  {/* Page header banner */}
+                  <div style={styles.pageHeader}>
+                    <div style={{ fontSize: 28, marginBottom: 4 }}>🌍</div>
+                    <h1 style={styles.pageTitle}>Yasser Arafat</h1>
+                    <div style={styles.pageSubtitle}>
+                      Palestinian Liberation Leader · Activist · Statesman
+                    </div>
+                  </div>
+
+                  <TabBar activeTab={activeTab} onChange={setActiveTab} />
+
+                  {/*
+                    Lookup the active tab component from TAB_MAP.
+                    This avoids a messy if/else chain — O(1) lookup
+                    using a plain object as a hash map.
+                  */}
+                  <div className="window-content" style={{ border: 'none', margin: 0 }}>
+                    {TAB_MAP[activeTab]}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </XpWindow>
+
+          <NotepadWindow />
+        </div>
+      </div>
+    </>
+  );
 }
 
 function NotepadWindow() {
-    
+    return (
+    <XpWindow
+      title="research_notes.txt — Notepad"
+      icon="📝"
+      menuItems={['File', 'Edit', 'Format', 'Help']}
+    >
+      <div className="window-content" style={{
+        fontFamily: 'Courier New, monospace',
+        fontSize: 11,
+        lineHeight: 1.8,
+        whiteSpace: 'pre-wrap',
+      }}>
+
+      </div>
+    </XpWindow>
+    );
 }
 
 /** App specific styles */
