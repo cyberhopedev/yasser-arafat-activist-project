@@ -5,15 +5,10 @@ import './styles/windows-xp-theme.css';
 import './styles/components.css';
 
 /** Components */
-import Taskbar         from './components/Taskbar.jsx';
-// NOTE: The local name on the LEFT of `from` is what the rest of this file
-// must use in JSX. JSX `<Foo />` compiles to `React.createElement(Foo, ...)`,
-// so `Foo` is just a regular variable lookup. If the import name doesn't
-// match the JSX tag, React tries to render `undefined` and you get a blank
-// page (with a "X is not defined" ReferenceError in the browser console).
+import Taskbar    from './components/Taskbar.jsx';
 import WindowsXpWindow from './components/WindowsXpWindow.jsx';
-import Sidebar         from './components/Sidebar.jsx';
-import TabBar          from './components/TabBar.jsx';
+import Sidebar    from './components/Sidebar.jsx';
+import TabBar     from './components/TabBar.jsx';
 
 /** Tab content panels */
 import OverviewTab  from './components/tabs/OverviewTab.jsx';
@@ -119,7 +114,104 @@ function NotepadWindow() {
         lineHeight: 1.8,
         whiteSpace: 'pre-wrap',
       }}>
+        {/*
+          Template literals (the backticks ` `) preserve newlines and spacing.
+          Combined with `whiteSpace: 'pre-wrap'` above, the text renders exactly
+          as it's typed here — including indentation and blank lines. This is
+          how you embed plain text inside JSX without React collapsing whitespace.
+        */}
+        {`research_notes.txt  --  working file, do not cite
 
+================================================================
+WHY THIS PROJECT?
+================================================================
+Picked Arafat because he sits on the seam between two
+"repertoires" we keep reading about in class -- armed struggle
+and diplomacy. Most figures fall cleanly on one side; he doesn't.
+Agha & Khalidi (2014) basically argue you can't separate the
+two phases without losing the story. That tension is the spine
+of the project.
+
+
+================================================================
+THINGS I KEEP COMING BACK TO
+================================================================
+- Identity is CONSTRUCTED, not inherited.
+  Arafat's Egyptian accent and Cairo birth made him a "wrong"
+  Palestinian by 1950s purity standards (Agha & Khalidi 2014).
+  He insisted on the identity anyway. Useful counter-example
+  to essentialist framings of nationalism.
+
+- Peteet's "work of comparison" idea is doing a lot of lifting.
+  The Israel/Palestine <-> apartheid SA comparison isn't just
+  rhetorical -- the PLO and ANC literally collaborated. BDS is
+  the receipt. (Peteet 2016, ~p.257)
+
+- Wagner (1983) is short but devastating. The looting of the
+  Palestine Research Centre is the detail I can't shake --
+  destroying the *archive* of a people is a specific kind of
+  violence that the rest of the literature names less directly.
+
+- Newman (1999) keeps me honest. "Ingrained positioning" -- the
+  reminder that I'm reading all of this from somewhere too.
+
+
+================================================================
+QUESTIONS I HAVEN'T RESOLVED
+================================================================
+Q1. Did Oslo "succeed" or "fail"?
+    Depends entirely on the frame.
+      success-frame: mutual recognition, PA institutions,
+                     return to Palestinian soil
+      failure-frame: Peteet (2016, 251) -- "formalized
+                     separation," non-contiguous entities,
+                     Israel keeps the real levers
+    Probably need to argue both are true at the same time.
+
+Q2. Was the 1988 acceptance of UN 242 a strategic concession
+    or a surrender? Class readings lean concession; some of
+    the secondary stuff I skimmed leans surrender. Worth a
+    second pass before final draft.
+
+Q3. The Rwanda comparison feels weaker than the SA one.
+    Identity-card mechanism is real, but the analogy strains
+    on the genocide axis. Either tighten it or drop it -- a
+    half-baked comparison is worse than no comparison.
+    (Newman 1999 basically warns about this exact failure
+    mode.)
+
+
+================================================================
+TODO BEFORE TURN-IN
+================================================================
+[x] Timeline: 1929 -> 2004 anchor events
+[x] Tactics table with results column
+[x] Sources tab w/ key arguments
+[ ] Tighten Rwanda comparison or cut it
+[ ] Add 1-2 sentences on the 1974 UN speech as a turning
+    point -- right now it's just listed, not analyzed
+[ ] Find a primary-source Arafat quote for the Activism tab
+    (UN '74 speech transcript, maybe?)
+[ ] Re-read Newman to make sure the framing intro doesn't
+    sound like I'm taking a "side" -- comparative analysis
+    ≠ advocacy
+[ ] Spell-check pass (caught "Palestianian" once already...)
+
+
+================================================================
+MISC
+================================================================
+- The XP aesthetic was a goof at first but I think it actually
+  works -- the project is partly about *how* a movement gets
+  archived and represented, and an early-2000s desktop is its
+  own kind of archive. Arafat died in 2004; XP shipped in 2001.
+  Coincidence, but a useful one.
+
+- If I had more time: a fifth tab on the post-Arafat PA period
+  to follow Agha & Khalidi's "bleak future" thread.
+
+-- end of file --
+`}
       </div>
     </WindowsXpWindow>
     );

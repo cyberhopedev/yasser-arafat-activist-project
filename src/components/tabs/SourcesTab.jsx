@@ -32,12 +32,6 @@ export default function SourcesTab() {
                             </span>
                                 <strong style={{ lineHeight: 1.5 }}>{src.citation}</strong>
                             </div>
-                            <div style={{ marginBottom: 4 }}>
-                                <strong>Key Argument:</strong> {src.keyArgument}
-                            </div>
-                            <div style={{ color: '#3a6bc8' }}>
-                                <strong>Used In:</strong> {src.usedIn}
-                            </div>
                         </div>
                     ))}
 
