@@ -9,11 +9,92 @@
 /**
 * Custom CSS properties available for every element
 */
+:root {
+  /* Title bar gradient colors */
+  --xp-title-start:   #4593ff;
+  --xp-title-mid:     #3a6bc8;
+  --xp-title-end:     #0a246a;
+
+  /* Surface colors */
+  --xp-silver:        #d4d0c8;
+  --xp-silver-light:  #ece9d8;
+  --xp-silver-dark:   #a0a090;
+  --xp-white:         #ffffff;
+
+  /* Taskbar */
+  --xp-taskbar-top:   #245edb;
+  --xp-taskbar-bot:   #1941a5;
+
+  /* Start button */
+  --xp-green-top:     #3fad3f;
+  --xp-green-bot:     #1a6e1a;
+
+  /* Text & links */
+  --xp-text:          #000000;
+  --xp-link:          #0000ee;
+  --xp-text-muted:    #555555;
+
+  /* Accent */
+  --xp-blue-dark:     #0a246a;
+  --xp-blue-mid:      #3a6bc8;
+
+  /* Sidebar (IE-style blue panel) */
+  --xp-sidebar-top:   #6ba3e0;
+  --xp-sidebar-bot:   #4a7fc0;
+
+  /* Placeholder / note colors */
+  --xp-note-bg:       #f0f4ff;
+  --xp-note-border:   #7a9fcc;
+  --xp-info-bg:       #fffbe6;
+  --xp-info-border:   #e0a000;
+
+  /* Fonts — Tahoma is XP's signature typeface */
+  --font-xp:          'Tahoma', 'Trebuchet MS', sans-serif;
+  --font-mono:        'Courier New', monospace;
+
+  /* Spacing scale — consistent spacing prevents "random" padding everywhere */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   12px;
+  --space-lg:   18px;
+  --space-xl:   24px;
+
+  /* Border styles used across all XP windows */
+  --border-window:    2px solid var(--xp-blue-mid);
+  --border-inset:     1px solid #aaa;
+  --shadow-window:    2px 2px 8px rgba(0,0,0,0.5),
+                      inset 1px 1px 0 rgba(255,255,255,0.8);
+}
 
 /**
 * Golbal website resetter logic
 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-xp);
+  font-size: 11px;
+  /* XP desktop: blue radial gradient */
+  background-color: #3a6ea5;
+  background-image: radial-gradient(
+    ellipse at 30% 60%,
+    #5a9fd4 0%,
+    #3a6ea5 40%,
+    #1a3f6f 100%
+  );
+  min-height: 100vh;
+  padding: 12px 12px 50px 12px; /* bottom pad = taskbar height */
+  color: var(--xp-text);
+}
 
 /**
 * Scrollbar styling for the website usign Webkit
 */
+::-webkit-scrollbar       { width: 16px; }
+::-webkit-scrollbar-track { background: #d4d0c8; border: 1px inset #aaa; }
+::-webkit-scrollbar-thumb { background: linear-gradient(to right, #c8c8c0, #a8a8a0); border: 1px solid #888; }
+::-webkit-scrollbar-button{ background: #d4d0c8; border: 1px solid #888; height: 16px; }
