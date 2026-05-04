@@ -19,6 +19,9 @@ import SourcesTab   from './components/tabs/SourcesTab.jsx';
 /** Data/content to put on the page from my research */
 import { desktopIcons } from './data/content.js';
 
+/** Media/Pictures */
+import profilePic from './assets/Yasser_Arafat.jpeg';
+
 /** Mapping of the tab to it's ID */
 const TAB_MAP = {
   overview: <OverviewTab />,
@@ -70,9 +73,15 @@ export default function App() {
                 <Sidebar onNavigate={navigate} />
 
                 <div className="explorer-main">
-                  {/* Page header banner */}
+                  {/* Page header banner with Arafat's picture */}
                   <div style={styles.pageHeader}>
-                    <div style={{ fontSize: 28, marginBottom: 4 }}>🌍</div>
+                    <img src={profilePic} alt ="Yasser Arafat Picture" style={{ width: 60, 
+                                  height: 60, 
+                                  borderRadius: '50%', 
+                                  border: '2px solid white',
+                                  marginBottom: 8,
+                                  objectFit: 'cover' }}
+                    />
                     <h1 style={styles.pageTitle}>Yasser Arafat</h1>
                     <div style={styles.pageSubtitle}>
                       Palestinian Liberation Leader · Activist · Statesman
